@@ -80,7 +80,7 @@ app.delete('/people/:id', async (req, res) => {
 })
 
 // Update Route
-app.put(`/people/${person._id}`, async (req, res) => {
+app.put(`/people/:id}`, async (req, res) => {
   try {
     res.status(200).json(
       await People.findByIdAndUpdate(req.params.id, req.body, { new: true })
